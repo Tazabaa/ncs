@@ -949,7 +949,71 @@
     <header id="mainHeader">
         <div class="logo">NCS OFFICIAL WEB</div>
         <div class="tagline">ENJOY HUSTLE MUSIC</div>
-        <button class="header-toggle" id="headerToggle">▼</button>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Wave Button</title>
+  <style>
+    /* Button Styling */
+    .header-toggle {
+      font-size: 30px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: #ff7f00; /* Initial strong orange color */
+      transition: transform 0.3s ease;
+      animation: waveMovement 2s infinite, colorWave 2s infinite;
+    }
+
+    /* Create the wave-like motion (shooting effect) */
+    @keyframes waveMovement {
+      0% {
+        transform: translateY(0); /* Start position */
+      }
+      50% {
+        transform: translateY(-15px); /* Wave rises up */
+      }
+      100% {
+        transform: translateY(0); /* Return to original position */
+      }
+    }
+
+    /* Ocean-like wave of color - compression and rarefaction */
+    @keyframes colorWave {
+      0% {
+        color: #ff7f00; /* Strong orange at the peak of the wave */
+      }
+      20% {
+        color: #ff9e00; /* Slightly weaker orange */
+      }
+      40% {
+        color: #ffb24d; /* Weak orange, almost yellowish, rarefaction */
+      }
+      60% {
+        color: #ff9e00; /* Slightly weaker orange */
+      }
+      80% {
+        color: #ff7f00; /* Strong orange again */
+      }
+      100% {
+        color: #ff7f00; /* Strong orange to complete the wave cycle */
+      }
+    }
+
+    /* Hover effect to enlarge the button slightly */
+    .header-toggle:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Button -->
+  <button class="header-toggle" id="headerToggle">▲</button>
+</body>
+</html>
+
     </header>
     
     <nav>
@@ -1123,10 +1187,11 @@
         <div class="bio">
             <p>For bookings, features, or just to show love:</p>
             <p>NCS Contact: 079 218 9044</p>
-            <p>Email: Ncsngobeni@gmail.com</p>
+            <a href="mailto:Ncsngobeni@gmail.com">Email: Ncsngobeni@gmail.com</a>
             <p>Web Developer: Brandon Lukhele</p>
             <p>Contact: 076 815 4014</p>
-            <p>Email: jblukhele2002@gmail.com</p>
+            <a href="mailto:jblukhele2002@gmail.com">Email: jblukhele2002@gmail.com</a>
+
         </div>
     </section>
     
