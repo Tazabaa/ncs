@@ -242,30 +242,6 @@
             font-size: 0.77rem;
         }
         
-        .music-stats {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 1.5rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .music-stat {
-            display: flex;
-            align-items: center;
-            font-size: 0.8rem;
-            color: #ff5500;
-        }
-        
-        .music-stat-icon {
-            margin-right: 5px;
-            font-size: 1rem;
-        }
-        
-        .music-stat-value {
-            font-weight: bold;
-        }
-        
         .music-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -310,62 +286,12 @@
             display: block;
         }
         
-        .track-stats {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 0.5rem;
-            font-size: 0.6rem;
-            color: #aaa;
-        }
-        
-        .track-stat {
-            display: flex;
-            align-items: center;
-        }
-        
-        .track-stat-icon {
-            margin-right: 3px;
-            font-size: 0.7rem;
-        }
-        
         .track-links {
             display: flex;
             gap: 10px;
             margin-top: 1rem;
             flex-wrap: wrap;
             align-items: center;
-        }
-        
-        .like-btn {
-            background: none;
-            border: none;
-            color: #aaa;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            font-size: 0.7rem;
-            transition: all 0.3s;
-            padding: 0.3rem 0.6rem;
-            border-radius: 15px;
-        }
-        
-        .like-btn:hover {
-            color: #ff5500;
-            background-color: rgba(255, 85, 0, 0.1);
-        }
-        
-        .like-btn.liked {
-            color: #ff5500;
-        }
-        
-        .like-icon {
-            font-size: 1.4rem;
-            margin-right: 3px;
-        }
-        
-        .like-count {
-            margin-left: 5px;
-            font-size: 0.7rem;
         }
         
         .download-btn, .youtube-btn, .audiomack-btn {
@@ -919,20 +845,6 @@
             justify-content: center;
         }
         
-        /* Visit counter */
-        .visit-counter {
-            position: fixed;
-            bottom: 60px;
-            right: 20px;
-            background-color: rgba(255, 85, 0, 0.8);
-            color: black;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            z-index: 1000;
-        }
-        
         @media (max-width: 768px) {
             body {
                 padding-top: 60px;
@@ -964,14 +876,6 @@
             
             .hero h1 {
                 font-size: 1.75rem;
-            }
-            
-            .music-stats {
-                gap: 1rem;
-            }
-            
-            .music-stat {
-                font-size: 0.7rem;
             }
             
             .music-grid {
@@ -1038,13 +942,6 @@
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .visit-counter {
-                bottom: 50px;
-                right: 10px;
-                font-size: 0.6rem;
-                padding: 0.3rem 0.6rem;
-            }
         }
     </style>
 </head>
@@ -1084,50 +981,12 @@
     <section class="container" id="music">
         <h2>Music</h2>
         
-        <div class="music-stats">
-            <div class="music-stat">
-                <span class="music-stat-icon">♥</span>
-                <span class="music-stat-value" id="totalLikesDisplay">0</span> Likes
-            </div>
-            <div class="music-stat">
-                <span class="music-stat-icon">▶</span>
-                <span class="music-stat-value" id="totalPlaysDisplay">0</span> Plays
-            </div>
-            <div class="music-stat">
-                <span class="music-stat-icon">📥</span>
-                <span class="music-stat-value" id="totalDownloadsDisplay">0</span> Downloads
-            </div>
-            <div class="music-stat">
-                <span class="music-stat-icon">▶️</span>
-                <span class="music-stat-value" id="totalYouTubeVisitsDisplay">0</span> YouTube Visits
-            </div>
-        </div>
-        
         <div class="music-grid">
             <!-- Song 1 -->
             <div class="track" data-song="song1">
                 <h3><span class="play-icon">▶</span> Mduduzi Ncube - Angsakhoni (NCS MP Cover)</h3>
                 <span class="year">2023 Cover</span>
-                <div class="track-stats">
-                    <div class="track-stat">
-                        <span class="track-stat-icon">♥</span>
-                        <span class="track-likes-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">▶</span>
-                        <span class="track-plays-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">📥</span>
-                        <span class="track-downloads-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">▶️</span>
-                        <span class="track-youtube-count">0</span>
-                    </div>
-                </div>
                 <div class="track-links">
-                    <button class="like-btn" data-song="song1"><span class="like-icon">♥</span> <span class="like-count">0</span></button>
                     <a href="https://kingscustoms.co.za/search/mduduzi-ncube-angsakhoni-ncs-mp-cover" class="download-btn" target="_blank">Download</a>
                     <a href="https://www.youtube.com/watch?v=ufrVzsbJEok" class="youtube-btn" target="_blank">YouTube</a>
                 </div>
@@ -1137,26 +996,7 @@
             <div class="track" data-song="song2">
                 <h3><span class="play-icon">▶</span> NCS Time for Hero</h3>
                 <span class="year">2022 Single</span>
-                <div class="track-stats">
-                    <div class="track-stat">
-                        <span class="track-stat-icon">♥</span>
-                        <span class="track-likes-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">▶</span>
-                        <span class="track-plays-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">📥</span>
-                        <span class="track-downloads-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">▶️</span>
-                        <span class="track-youtube-count">0</span>
-                    </div>
-                </div>
                 <div class="track-links">
-                    <button class="like-btn" data-song="song2"><span class="like-icon">♥</span> <span class="like-count">0</span></button>
                     <a href="https://kingscustoms.co.za/search/time-for-hero-ncs" class="download-btn" target="_blank">Download</a>
                     <a href="https://www.youtube.com/watch?v=enh3yDh-9Gc&list=PLmWwkT3u-f5SVKtHFv1miTrcHrRl48Ty5&index=8" class="youtube-btn" target="_blank">YouTube</a>
                 </div>
@@ -1166,26 +1006,7 @@
             <div class="track" data-song="song3">
                 <h3><span class="play-icon">▶</span> NCS Mama (prod. by Dollar)</h3>
                 <span class="year">2022 Single</span>
-                <div class="track-stats">
-                    <div class="track-stat">
-                        <span class="track-stat-icon">♥</span>
-                        <span class="track-likes-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">▶</span>
-                        <span class="track-plays-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">📥</span>
-                        <span class="track-downloads-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">▶️</span>
-                        <span class="track-youtube-count">0</span>
-                    </div>
-                </div>
                 <div class="track-links">
-                    <button class="like-btn" data-song="song3"><span class="like-icon">♥</span> <span class="like-count">0</span></button>
                     <a href="https://kingscustoms.co.za/search/ncs-mama-dollar" class="download-btn" target="_blank">Download</a>
                     <a href="https://www.youtube.com/watch?v=bomn8IeujFM&list=PLmWwkT3u-f5SVKtHFv1miTrcHrRl48Ty5&index=6" class="youtube-btn" target="_blank">YouTube</a>
                 </div>
@@ -1195,26 +1016,7 @@
             <div class="track" data-song="song4">
                 <h3><span class="play-icon">▶</span> NCS MP - Deliwe ft. Young Angie & Queen NC</h3>
                 <span class="year">2022 Collaboration</span>
-                <div class="track-stats">
-                    <div class="track-stat">
-                        <span class="track-stat-icon">♥</span>
-                        <span class="track-likes-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">▶</span>
-                        <span class="track-plays-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">📥</span>
-                        <span class="track-downloads-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">▶️</span>
-                        <span class="track-youtube-count">0</span>
-                    </div>
-                </div>
                 <div class="track-links">
-                    <button class="like-btn" data-song="song4"><span class="like-icon">♥</span> <span class="like-count">0</span></button>
                     <a href="https://kingscustoms.co.za/search/ncs-mp-deliwe-ft-young-angie" class="download-btn" target="_blank">Download</a>
                     <a href="https://www.youtube.com/watch?v=zsnq2YT97Bw&list=PLmWwkT3u-f5SVKtHFv1miTrcHrRl48Ty5&index=1" class="youtube-btn" target="_blank">YouTube</a>
                 </div>
@@ -1224,10 +1026,7 @@
             <div class="track" data-song="song5">
                 <h3><span class="play-icon">▶</span> NCS & Thash - Reserecting Rap</h3>
                 <span class="year">2022 Collaboration</span>
-                <div class="track-stats">
-                   
                 <div class="track-links">
-                    <button class="like-btn" data-song="song5"><span class="like-icon">♥</span></button>
                     <a href="https://kingscustoms.co.za/search/ncs-reserecting-rap" class="download-btn" target="_blank">Download</a>
                     <a href="https://www.youtube.com/watch?v=Lq2ZVyQf35o&list=PLmWwkT3u-f5SVKtHFv1miTrcHrRl48Ty5&index=5" class="youtube-btn" target="_blank">YouTube</a>
                 </div>
@@ -1237,26 +1036,7 @@
             <div class="track" data-song="song6">
                 <h3><span class="play-icon">▶</span> NCS Number 7</h3>
                 <span class="year">2023 Single</span>
-                <div class="track-stats">
-                    <div class="track-stat">
-                        <span class="track-stat-icon">♥</span>
-                        <span class="track-likes-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">▶</span>
-                        <span class="track-plays-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">📥</span>
-                        <span class="track-downloads-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">▶️</span>
-                        <span class="track-youtube-count">0</span>
-                    </div>
-                </div>
                 <div class="track-links">
-                    <button class="like-btn" data-song="song6"><span class="like-icon">♥</span> <span class="like-count">0</span></button>
                     <a href="https://kingscustoms.co.za/search/ncs-mp-number-7" class="download-btn" target="_blank">Download</a>
                     <a href="https://www.youtube.com/watch?v=9E__--zXqDQ" class="youtube-btn" target="_blank">YouTube</a>
                 </div>
@@ -1266,26 +1046,7 @@
             <div class="track" data-song="song7">
                 <h3><span class="play-icon">▶</span> NCS MP – Esbhedlela ft. Sushii Main</h3>
                 <span class="year">2023 Collaboration</span>
-                <div class="track-stats">
-                    <div class="track-stat">
-                        <span class="track-stat-icon">♥</span>
-                        <span class="track-likes-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">▶</span>
-                        <span class="track-plays-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">📥</span>
-                        <span class="track-downloads-count">0</span>
-                    </div>
-                    <div class="track-stat">
-                        <span class="track-stat-icon">▶️</span>
-                        <span class="track-youtube-count">0</span>
-                    </div>
-                </div>
                 <div class="track-links">
-                    <button class="like-btn" data-song="song7"><span class="like-icon">♥</span> <span class="like-count">0</span></button>
                     <a href="https://kingscustoms.co.za/search/esbhedlela-ncs" class="download-btn" target="_blank">Download</a>
                     <a href="https://www.youtube.com/watch?v=Py6kQRFacIU" class="youtube-btn" target="_blank">YouTube</a>
                 </div>
@@ -1408,11 +1169,6 @@
         </div>
     </div>
 
-    <!-- Visit Counter -->
-    <div class="visit-counter" id="visitCounter">
-        Visits: <span id="visitCount">0</span>
-    </div>
-
     <footer>
         <div class="social-links">
             <a href="https://www.facebook.com/ncs.nicholas/" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -1429,61 +1185,6 @@
     </footer>
 
     <script>
-        // Initialize stats from localStorage
-        let stats = {
-            totalLikes: parseInt(localStorage.getItem('totalLikes')) || 0,
-            totalPlays: parseInt(localStorage.getItem('totalPlays')) || 0,
-            totalDownloads: parseInt(localStorage.getItem('totalDownloads')) || 0,
-            totalYouTubeVisits: parseInt(localStorage.getItem('totalYouTubeVisits')) || 0,
-            songStats: JSON.parse(localStorage.getItem('songStats')) || {},
-            visitCount: parseInt(localStorage.getItem('visitCount')) || 0
-        };
-        
-        // Initialize visit count
-        stats.visitCount++;
-        localStorage.setItem('visitCount', stats.visitCount);
-        document.getElementById('visitCount').textContent = stats.visitCount;
-        
-        // Update stats display
-        function updateStatsDisplay() {
-            document.getElementById('totalLikesDisplay').textContent = stats.totalLikes;
-            document.getElementById('totalPlaysDisplay').textContent = stats.totalPlays;
-            document.getElementById('totalDownloadsDisplay').textContent = stats.totalDownloads;
-            document.getElementById('totalYouTubeVisitsDisplay').textContent = stats.totalYouTubeVisits;
-        }
-        
-        // Update individual song stats display
-        function updateSongStatsDisplay(songId) {
-            const songStat = stats.songStats[songId] || {
-                likes: 0,
-                plays: 0,
-                downloads: 0,
-                youtubeVisits: 0
-            };
-            
-            document.querySelectorAll(`[data-song="${songId}"] .track-likes-count`).forEach(el => {
-                el.textContent = songStat.likes;
-            });
-            document.querySelectorAll(`[data-song="${songId}"] .track-plays-count`).forEach(el => {
-                el.textContent = songStat.plays;
-            });
-            document.querySelectorAll(`[data-song="${songId}"] .track-downloads-count`).forEach(el => {
-                el.textContent = songStat.downloads;
-            });
-            document.querySelectorAll(`[data-song="${songId}"] .track-youtube-count`).forEach(el => {
-                el.textContent = songStat.youtubeVisits;
-            });
-        }
-        
-        // Save stats to localStorage
-        function saveStats() {
-            localStorage.setItem('totalLikes', stats.totalLikes);
-            localStorage.setItem('totalPlays', stats.totalPlays);
-            localStorage.setItem('totalDownloads', stats.totalDownloads);
-            localStorage.setItem('totalYouTubeVisits', stats.totalYouTubeVisits);
-            localStorage.setItem('songStats', JSON.stringify(stats.songStats));
-        }
-        
         // Song data with your specified names
         const songs = [
             { id: "song1", title: "Mduduzi Ncube - Angsakhoni (NCS MP Cover)", file: "Mduduzi Ncube - Angsakhoni (NCS MP Cover).mp3", duration: "3:45" },
@@ -1494,20 +1195,6 @@
             { id: "song6", title: "NCS Number 7", file: "NCS Number 7.mp3", duration: "3:12" },
             { id: "song7", title: "NCS MP – Esbhedlela ft. Sushii Main", file: "NCS MP – Esbhedlela ft. Sushii Main.mp3", duration: "3:45" }
         ];
-        
-        // Initialize all song stats displays
-        songs.forEach(song => {
-            if (!stats.songStats[song.id]) {
-                stats.songStats[song.id] = {
-                    likes: 0,
-                    plays: 0,
-                    downloads: 0,
-                    youtubeVisits: 0
-                };
-            }
-            updateSongStatsDisplay(song.id);
-        });
-        updateStatsDisplay();
         
         // Header toggle functionality
         const mainHeader = document.getElementById('mainHeader');
@@ -1615,13 +1302,6 @@
             document.querySelectorAll(`[data-song="${songId}"] .play-icon`).forEach(icon => {
                 icon.textContent = '❚❚';
             });
-            
-            // Update play count
-            stats.songStats[songId].plays++;
-            stats.totalPlays++;
-            updateSongStatsDisplay(songId);
-            updateStatsDisplay();
-            saveStats();
             
             // Play audio
             audio.play()
@@ -1805,70 +1485,6 @@
                 audio.currentTime = (percentageClicked / 100) * audio.duration;
                 timeDisplay.textContent = `${formatTime(Math.floor(audio.currentTime))} / ${songs[currentSongIndex].duration}`;
             }
-        });
-        
-        // Like Button Functionality with Local Storage
-        const likeButtons = document.querySelectorAll('.like-btn');
-        
-        // Initialize likes from localStorage
-        likeButtons.forEach(button => {
-            const songId = button.getAttribute('data-song');
-            const likeCountElement = button.querySelector('.like-count');
-            
-            // Update display
-            likeCountElement.textContent = stats.songStats[songId].likes || '0';
-        });
-        
-        // Like button click handler
-        likeButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.stopPropagation(); // Prevent triggering track play
-                
-                const songId = button.getAttribute('data-song');
-                const likeCountElement = button.querySelector('.like-count');
-                
-                // Update like count
-                stats.songStats[songId].likes++;
-                stats.totalLikes++;
-                
-                // Update display
-                likeCountElement.textContent = stats.songStats[songId].likes;
-                button.classList.add('liked');
-                
-                // Save and update stats
-                updateSongStatsDisplay(songId);
-                updateStatsDisplay();
-                saveStats();
-            });
-        });
-        
-        // Track download and YouTube visit tracking
-        document.querySelectorAll('.download-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                const songId = this.closest('.track').getAttribute('data-song');
-                
-                // Update counts
-                stats.songStats[songId].downloads++;
-                stats.totalDownloads++;
-                
-                updateSongStatsDisplay(songId);
-                updateStatsDisplay();
-                saveStats();
-            });
-        });
-        
-        document.querySelectorAll('.youtube-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                const songId = this.closest('.track').getAttribute('data-song');
-                
-                // Update counts
-                stats.songStats[songId].youtubeVisits++;
-                stats.totalYouTubeVisits++;
-                
-                updateSongStatsDisplay(songId);
-                updateStatsDisplay();
-                saveStats();
-            });
         });
         
         // Volume control
